@@ -123,6 +123,3 @@ php -r "echo ini_get('memory_limit').PHP_EOL;"
 
 echo "Run the integration tests"
 cd $MAGENTO_ROOT/dev/tests/integration && ../../../vendor/bin/phpunit -c phpunit.xml --coverage-clover=coverage.xml
-
-echo "Send clover report to Codecov"
-curl -s https://codecov.io/bash -t ${{ secrets.CODECOV_TOKEN }} -R .
