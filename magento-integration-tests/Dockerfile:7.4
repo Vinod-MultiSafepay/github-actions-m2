@@ -34,9 +34,7 @@ RUN docker-php-ext-install zip
 RUN docker-php-ext-install intl
 RUN docker-php-ext-install sockets
 
-RUN apk add --no-cache $PHPIZE_DEPS \
-    && pecl install xdebug-2.9.2 \
-    && docker-php-ext-enable xdebug  \
+RUN pecl install xdebug-2.9.2 && docker-php-ext-enable xdebug
 
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod 755 /entrypoint.sh
