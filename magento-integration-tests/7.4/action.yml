@@ -32,7 +32,7 @@ inputs:
     required: false
 runs:
   using: 'docker'
-  image: 'docker://extdn/magento-integration-tests-action:7.4-latest'
+  image: 'docker://vinod2/magento-integration-tests-action:7.4'
   env:
     MODULE_NAME: ${{ inputs.module_name }}
     COMPOSER_NAME: ${{ inputs.composer_name }}
